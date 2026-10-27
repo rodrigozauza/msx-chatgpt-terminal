@@ -1,0 +1,10 @@
+item;status;origem;observacoes
+Conjunto Fase 5 no Expert com gateway/API;PREMISSA_USUARIO;Instrucao de 27/10/2026;Sem converter a premissa em teste executado pelo agente
+Integridade dos componentes Fase 5;VERIFICADO_LOCAL;91 hashes de origem;Pacote de aplicacao preservado integralmente
+Reconstrucao do COM;VERIFICADO_LOCAL;SHA-256 identico;15608 bytes versao 0.5
+DOS1 individualmente;NAO_DISCRIMINADO;Premissa geral;Detalhes nao fornecidos nesta instrucao
+DOS2 individualmente;NAO_DISCRIMINADO;Premissa geral;Detalhes nao fornecidos nesta instrucao
+Nextor individualmente;NAO_DISCRIMINADO;Premissa geral;Detalhes nao fornecidos nesta instrucao
+API real executada pelo agente nesta fase;NAO_EXECUTADO;Escopo local de consolidacao;Relatos historicos e premissa preservados
+Expert executado pelo agente nesta fase;NAO_EXECUTADO;Sem acesso fisico nesta sessao;Aceite geral considerado por premissa
+Emulador MSX completo nesta fase;NAO_EXECUTADO;Escopo local;Nucleo Z80 simulado nao equivale a emulador MSX completo

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-27",
+  "phase": 6,
+  "status": "ENTREGA_FINAL_CONSOLIDADA_SOB_PREMISSA",
+  "application": {
+    "file": "aplicacao/MSXCHAT.COM",
+    "version": "0.5",
+    "bytes": 15608,
+    "sha256": "8c29446e75635afccb8cd90f373fce0e9ff24222b6d1433119c43233bda62ba4",
+    "unchangedFromPhase5": true
+  },
+  "baseline": {
+    "originalBundle": "FASE5-MSXCHAT",
+    "verifiedFiles": 91,
+    "manifestSHA256": "333b05092e13c64ba076a8be9002cb958909d428c29c94aa946cd93cf547b579"
+  },
+  "acceptance": "REGISTRO-HOMOLOGACAO.json",
+  "localValidation": "validacao-local/RESUMO.json",
+  "lastPlannedPhase": 6,
+  "nextPlannedPhase": null
+}

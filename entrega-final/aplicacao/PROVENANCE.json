@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-27",
+  "phase": 5,
+  "application": {
+    "file": "MSXCHAT.COM",
+    "version": "0.5",
+    "language": "Z80 Assembly",
+    "origin": "0100h",
+    "bytes": 15608,
+    "sha256": "8c29446e75635afccb8cd90f373fce0e9ff24222b6d1433119c43233bda62ba4",
+    "network": "MSX HTTP/UNAPI 200/202 polling; PC HTTPS OpenAI Responses gateway; API key and model configured only on PC",
+    "mapperAllocation": false,
+    "endExclusive": "0x3DF8"
+  },
+  "assembler": {
+    "name": "pyz80",
+    "gitBlob": "e9d1bbc33de7255c589cf6e9cb9aeba1372119fb",
+    "url": "https://github.com/simonowen/pyz80/blob/main/src/pyz80/pyz80.py",
+    "license": "GPL-2.0-or-later",
+    "modified": false
+  },
+  "cpuCore": {
+    "name": "Z80.js",
+    "gitBlob": "92760b9a346492243df099a11eca560a6085fd11",
+    "url": "https://github.com/DrGoldfire/Z80.js/blob/master/Z80.js",
+    "license": "MIT",
+    "modified": false
+  },
+  "validation": {
+    "binaryTestsPassed": 175,
+    "binaryTestsTotal": 175,
+    "scope": "Real COM on Z80 CPU; simulated DOS FCB, BIOS, VRAM and UNAPI",
+    "gatewayBaseTests": 37,
+    "gatewayTestsIncludingRealLoopback": 39,
+    "gatewayCountsOverlap": "The 37 base cases are included in the 39-case run",
+    "manualServerTestsPassed": 18,
+    "nativeResponseHelperTestsPassed": 12,
+    "nativeBackupTestsPassed": 16,
+    "realPCNetwork": "HTTP and HTTPS/TLS loopback passed; synthetic certificate, API credential and API responses",
+    "liveOpenAI": "NOT RUN; OPENAI_API_KEY/model absent at initial configuration check, user chose to configure OPENAI_MODEL on PC later",
+    "physicalExpert": "Phase 4 accepted as user premise; new Phase 5 COM/gateway not run on physical Expert by agent",
+    "completeMSXEmulator": "not executed",
+    "visualQA": "Inspected processing and final simulated-API VRAM previews",
+    "reproducibleBuild": true
+  },
+  "dataCompatibility": {
+    "readsPhase2": true,
+    "cancellationExtension": "CAN/CNT, state=cancelled",
+    "downgrade": "Use pre-upgrade data backup; Phase 2 does not understand CAN",
+    "networkStage": "RXT: provisional response body, ignored at startup and preserved by backup",
+    "http202": "Control status, not a local completed/error envelope; polling does not create another API generation"
+  },
+  "gateway": {
+    "endpoint": "https://api.openai.com/v1/responses",
+    "sdk": "none; Node standard HTTPS",
+    "defaultModel": null,
+    "modelSetting": "OPENAI_MODEL required",
+    "keySetting": "OPENAI_API_KEY on PC only; not printed or shipped",
+    "context": "up to 8 completed pairs, 16000 Unicode scalars of history, plus current question",
+    "externalRetries": 0,
+    "journal": "reservation/start/result plus namespace lock; started job without result is never automatically re-dispatched"
+  }
+}

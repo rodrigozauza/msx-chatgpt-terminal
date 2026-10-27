@@ -1,0 +1,5 @@
+{
+  "passed": 12,
+  "total": 12,
+  "scope": "Node filesystem and manual offline fixture publisher; no network"
+}

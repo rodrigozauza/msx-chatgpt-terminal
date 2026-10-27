@@ -1,0 +1,11 @@
+# Local credentials and runtime state; never part of the release.
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+gateway.lock
+GATEWAY-STATE.json
+jobs/
+gateway-state/

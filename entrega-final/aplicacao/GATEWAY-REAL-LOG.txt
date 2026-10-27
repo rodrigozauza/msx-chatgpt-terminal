@@ -1,0 +1,7 @@
+{
+  "passed": 39,
+  "total": 39,
+  "realLoopback": true,
+  "liveOpenAI": false
+}
+Executed in a fresh authorized shell. Real loopback HTTP and HTTPS/TLS; synthetic API credentials and responses; no connection to OpenAI.

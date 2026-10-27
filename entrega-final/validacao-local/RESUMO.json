@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-27",
+  "applicationUnchanged": true,
+  "rebuildMatches": true,
+  "comSHA256": "8c29446e75635afccb8cd90f373fce0e9ff24222b6d1433119c43233bda62ba4",
+  "suites": [
+    {
+      "suite": "COM",
+      "passed": 175,
+      "total": 175,
+      "scope": "Z80 com DOS/BIOS/VRAM/UNAPI simulados"
+    },
+    {
+      "suite": "gateway",
+      "passed": 37,
+      "total": 37,
+      "scope": "PC; API simulada e sem sockets nesta execucao"
+    },
+    {
+      "suite": "servidor-manual",
+      "passed": 18,
+      "total": 18,
+      "scope": "PC; API simulada e sem sockets nesta execucao"
+    },
+    {
+      "suite": "publicador",
+      "passed": 12,
+      "total": 12,
+      "scope": "PC; API simulada e sem sockets nesta execucao"
+    },
+    {
+      "suite": "backup",
+      "passed": 16,
+      "total": 16,
+      "scope": "PC; API simulada e sem sockets nesta execucao"
+    }
+  ],
+  "networkRepeated": false,
+  "liveAPIExecuted": false,
+  "physicalExpertExecuted": false,
+  "fullMSXEmulatorExecuted": false
+}

@@ -1,0 +1,43 @@
+; MSX1-only BIOS and RAM allocation. No DOS2/Nextor-only calls.
+BDOS: equ &0005
+CALSLT: equ &001C
+EXPTBL: equ &FCC1
+RG0SAV: equ &F3DF
+SCRMOD: equ &FCAF
+CNSDFG: equ &F3DE
+JIFFY: equ &FC9E
+GRID: equ &4000
+EDITOR: equ &4600
+ROWBUF: equ &4E00
+NAMES: equ &4F00
+DIRTY: equ &5200
+ROWCOLORS: equ &5220
+OVERLAY_BACKUP: equ &5300
+OVERLAY_COLORS: equ &5740
+INPUT_OLD: equ &5800
+VRAM_BACKUP: equ &6000
+MSG_BUFFER: equ &A000
+REPLY_BUFFER: equ &A800
+IOBUF: equ &B000
+META: equ &B100
+P_PROTOCOL: equ META
+P_REQUEST: equ META+16
+P_CONVERSATION: equ META+25
+P_STATE: equ META+34
+P_RESPONSE: equ META+50
+P_ERROR: equ META+59
+KEY_BUFFER: equ META+96
+FIELD_LENGTHS: equ META+128
+FCB: equ &B200
+HEX_BUFFER: equ &B300
+HISTORY_TEXT: equ &B400
+RAM_END: equ &C000
+EDITOR_MAX: equ 2047
+INPUT_ROW: equ 19
+INPUT_BASE: equ GRID+INPUT_ROW*64
+
+; Network buffers share the history cache only while history is closed.
+NETRX: equ &B400
+NETLINE: equ &B500
+NETTX: equ &B600
+NETPARAM: equ &B700

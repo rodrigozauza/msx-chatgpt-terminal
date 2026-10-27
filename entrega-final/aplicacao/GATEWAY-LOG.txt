@@ -1,0 +1,1 @@
+37 base cases passed as part of the 39-case run. See GATEWAY-REAL-LOG.txt.
