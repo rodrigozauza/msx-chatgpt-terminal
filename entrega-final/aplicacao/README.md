@@ -10,10 +10,15 @@ O novo COM e o gateway estão produzidos e testados localmente. Não houve chama
 - GATEWAY.cjs: servidor de produção desta fase.
 - OPENAI-CLIENT.cjs: adaptador HTTPS, endpoint oficial fixo.
 - GATEWAY-STORE.cjs: diário de pedidos, chamadas e resultados; contexto da conversa.
-- RUN-GATEWAY.cmd: iniciador Windows, procura Node no PATH e no runtime local do Codex.
+- RUN-GATEWAY.cmd / RUN-GATEWAY.sh: iniciadores Windows e Linux/POSIX; o shell usa Node no PATH.
+- linux/: modelo opcional de serviço systemd e configuração sem credenciais reais.
 - LAN-SERVER.cjs / RUN-LAN.cmd: servidor manual de teste preservado; não chama a API.
 - make-response.cjs / history-backup.py: fluxo offline e manutenção anteriores.
 - src, tools, tests: fontes completos, ferramentas e testes. Manuais anteriores preservados como MANUAL-BASE-FASE4.md e MANUAL-BASE-FASE3.md.
+
+## Configurar o servidor Windows ou Linux
+
+Consulte [SERVIDOR-WINDOWS-LINUX.md](SERVIDOR-WINDOWS-LINUX.md) para comandos completos de Linux (Bash/POSIX), operação, backup, firewall e serviço systemd. Os passos PowerShell abaixo continuam válidos no Windows.
 
 ## Configurar o PC
 
@@ -37,7 +42,7 @@ Inicie o gateway com os endereços reais da sua LAN. Exemplo: PC 192.168.1.10 e 
 ```
 A pasta --state deve ser nova/vazia na primeira execução e ficará somente no PC. Não use a pasta de cache do servidor manual da Fase 4. Guarde a mesma pasta entre execuções: ela contém o contexto e impede repetir chamadas. O gateway aceita somente o peer configurado; ambos os IPs devem ser privados. Libere a porta no firewall da LAN e não a encaminhe para a internet.
 
-No Linux, configure as mesmas variáveis no ambiente do processo e execute node GATEWAY.cjs com os mesmos argumentos. Não há instalação de SDK ou pacote: são usadas as bibliotecas padrão do Node.
+No Linux, use sh ./RUN-GATEWAY.sh com os mesmos argumentos e configure as variáveis conforme SERVIDOR-WINDOWS-LINUX.md. Não há instalação de SDK ou pacote: são usadas as bibliotecas padrão do Node.
 
 ## Usar no Expert
 

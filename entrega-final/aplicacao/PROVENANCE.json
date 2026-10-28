@@ -59,5 +59,24 @@
     "context": "up to 8 completed pairs, 16000 Unicode scalars of history, plus current question",
     "externalRetries": 0,
     "journal": "reservation/start/result plus namespace lock; started job without result is never automatically re-dispatched"
+  },
+  "maintenance": {
+    "date": "2026-10-27",
+    "id": "fase6-linux-r1",
+    "scope": "Linux POSIX launchers, Windows/Linux server manual and optional systemd service; MSX COM and gateway JS unchanged",
+    "platformValidation": {
+      "local": "Windows with Git Bash; not native Linux",
+      "linux": "Ubuntu CI configured; execution result not yet observed",
+      "systemd": "Template provided; installation not executed",
+      "liveOpenAI": false,
+      "physicalExpert": false
+    },
+    "tests": {
+      "launchers": 5,
+      "gatewayWithRealLoopback": 39,
+      "manualServerWithRealLoopback": 19,
+      "offlinePublisher": 12,
+      "total": 75
+    }
   }
 }

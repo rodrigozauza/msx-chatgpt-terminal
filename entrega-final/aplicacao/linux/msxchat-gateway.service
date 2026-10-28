@@ -1,0 +1,25 @@
+[Unit]
+Description=MSX ChatGPT Terminal gateway
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=msxchat
+Group=msxchat
+WorkingDirectory=/opt/msxchat
+EnvironmentFile=/etc/msxchat/gateway.env
+ExecStart=/usr/bin/node /opt/msxchat/GATEWAY.cjs --bind ${MSXCHAT_BIND} --peer ${MSXCHAT_PEER} --port ${MSXCHAT_PORT} --state /var/lib/msxchat
+StateDirectory=msxchat
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+Restart=no
+KillSignal=SIGTERM
+TimeoutStopSec=180
+
+[Install]
+WantedBy=multi-user.target

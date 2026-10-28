@@ -11,3 +11,7 @@ Persistem as características documentadas: uma conversa local por namespace, li
 Os resultados históricos são preservados com o escopo original. O aceite por premissa não substitui a identificação documental de cada ambiente; a matriz permite registrá-la posteriormente.
 
 Não existe uma etapa funcional adicional no escopo aprovado. Mudanças futuras devem partir desta versão identificada por hash.
+
+## Manutenção linux-r1 — 27/10/2026
+
+Acrescentados RUN-GATEWAY.sh, RUN-LAN.sh, manual SERVIDOR-WINDOWS-LINUX.md, serviço systemd e template de configuração sem credenciais reais. Acrescentados testes dos iniciadores e workflow Ubuntu/Windows no repositório. Regenerados os manifestos e ZIP. Nenhum byte do COM, gateway JavaScript ou fontes Assembly mudou. A afirmação acima de preservação integral da Fase 6 original se refere à entrega anterior; esta é uma revisão de manutenção, com evidências próprias em validacao-local/LINUX-R1-*.

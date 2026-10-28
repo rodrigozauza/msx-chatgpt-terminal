@@ -27,3 +27,9 @@ node VERIFICAR-ENTREGA.cjs
 O pacote nao inclui chave de API. `OPENAI_API_KEY` e `OPENAI_MODEL` sao configurados exclusivamente no PC. Os arquivos TLS em `tests/fixtures` sao dados sinteticos publicos usados apenas nos testes de loopback.
 
 Codigo proprio sob MIT; ferramentas de terceiros conservam suas licencas nos arquivos incluidos.
+
+## Servidor Windows ou Linux
+
+Consulte [o manual multiplataforma](entrega-final/aplicacao/SERVIDOR-WINDOWS-LINUX.md). A revisão `fase6-linux-r1` inclui `RUN-GATEWAY.sh`, `RUN-LAN.sh`, exemplos Bash de configuração e backup e um serviço systemd opcional. Os iniciadores Windows continuam disponíveis; `MSXCHAT.COM` e o gateway JavaScript mantêm seus bytes originais.
+
+Os manifestos e o ZIP foram regenerados. Passaram 75 casos locais (Windows/Git Bash e HTTP/TLS em loopback, API sintética). A [automação Ubuntu/Windows](https://github.com/rodrigozauza/msx-chatgpt-terminal/actions) executa os testes a cada atualização; a instalação do serviço systemd e a chamada real da API dependem da configuração do seu servidor.

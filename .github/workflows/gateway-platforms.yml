@@ -1,0 +1,38 @@
+name: Gateway Windows and Linux
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  gateway:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify delivery integrity
+        run: node entrega-final/VERIFICAR-ENTREGA.cjs
+      - name: POSIX launchers
+        if: runner.os == 'Linux'
+        working-directory: entrega-final/aplicacao
+        run: node tests/test-launchers.cjs
+      - name: Windows launcher configuration
+        if: runner.os == 'Windows'
+        shell: pwsh
+        working-directory: entrega-final/aplicacao
+        env:
+          OPENAI_API_KEY: TEST_ONLY_NOT_A_REAL_KEY
+          OPENAI_MODEL: test-model
+        run: ./RUN-GATEWAY.cmd --check-config
+      - name: Gateway HTTP and TLS regression (synthetic API)
+        working-directory: entrega-final/aplicacao
+        run: node tests/test-gateway.cjs . --real
+      - name: Manual LAN server
+        working-directory: entrega-final/aplicacao
+        run: node tests/test-lan-server.cjs . --real
+      - name: Offline publisher
+        working-directory: entrega-final/aplicacao
+        run: node tests/test-helper.cjs .

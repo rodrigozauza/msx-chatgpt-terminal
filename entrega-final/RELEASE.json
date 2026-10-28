@@ -12,10 +12,30 @@
   "baseline": {
     "originalBundle": "FASE5-MSXCHAT",
     "verifiedFiles": 91,
-    "manifestSHA256": "333b05092e13c64ba076a8be9002cb958909d428c29c94aa946cd93cf547b579"
+    "manifestSHA256": "333b05092e13c64ba076a8be9002cb958909d428c29c94aa946cd93cf547b579",
+    "scope": "Historical Phase 5 integrity verification before maintenance; current manifests regenerated for linux-r1"
   },
   "acceptance": "REGISTRO-HOMOLOGACAO.json",
   "localValidation": "validacao-local/RESUMO.json",
   "lastPlannedPhase": 6,
-  "nextPlannedPhase": null
+  "nextPlannedPhase": null,
+  "revision": {
+    "date": "2026-10-27",
+    "id": "fase6-linux-r1",
+    "scope": "Linux POSIX launchers, Windows/Linux server manual and optional systemd service; MSX COM and gateway JS unchanged",
+    "platformValidation": {
+      "local": "Windows with Git Bash; not native Linux",
+      "linux": "Ubuntu CI configured; execution result not yet observed",
+      "systemd": "Template provided; installation not executed",
+      "liveOpenAI": false,
+      "physicalExpert": false
+    },
+    "tests": {
+      "launchers": 5,
+      "gatewayWithRealLoopback": 39,
+      "manualServerWithRealLoopback": 19,
+      "offlinePublisher": 12,
+      "total": 75
+    }
+  }
 }

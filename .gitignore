@@ -9,3 +9,6 @@ gateway.lock
 GATEWAY-STATE.json
 jobs/
 gateway-state/
+
+# Linux server credentials (example remains versioned).
+gateway.env
