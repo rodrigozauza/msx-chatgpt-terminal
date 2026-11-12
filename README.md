@@ -1,5 +1,5 @@
 # msx-chatgpt-terminal
-A simple terminal to chatGPT via MSX 1 on screen2 ! Enjoy !
+Como amante da retrocomputação, resolvi pedir a IA para fazer um terminal em modo gráfico em micros de 8 bits, padrão MSX v1, a partir de um projeto inicial que fiz dessa interface em 1985. Acho que ficou legal. Com o tempo, vou incrementar novas funcionalidades. Fique a vontade também se você é conhecedor do assunto ! divirta-se !
 
 ## Entrega final
 
